@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Valentines Day Baby</title>
+    <!-- Elegant font from Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Overall background and basic styling */
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #c21807; /* Elegant red */
+        overflow-x: hidden;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Header style with the elegant font */
+      .header {
+        text-align: center;
+        font-family: "Great Vibes", cursive;
+        font-size: 4em;
+        margin-top: 50px;
+        color: white;
+      }
+
+      /* Styling for the romantic message */
+      .message {
+        text-align: center;
+        margin: 50px auto;
+        max-width: 600px;
+      }
+      .message blockquote {
+        font-style: italic;
+        font-size: 1.2em;
+        color: black;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      /* Rose petal styling */
+      .petal {
+        position: absolute;
+        top: -50px;
+        width: 30px;
+        height: 30px;
+        background-image: url("rose-petal.png"); /* Replace with your petal image URL */
+        background-size: cover;
+        opacity: 0.8;
+        pointer-events: none;
+        animation: fall linear infinite;
+      }
+
+      /* Keyframes for falling animation */
+      @keyframes fall {
+        0% {
+          transform: translateY(0) rotate(0deg);
+        }
+        100% {
+          transform: translateY(110vh) rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Elegant headline -->
+    <div class="header">Happy Valentines Day Baby</div>
+
+    <!-- Romantic ancient saying -->
+    <div class="message">
+      <blockquote>
+        "In the wisdom of ancient poets it was proclaimed that love is an eternal flame, kindling hope and passion in every heart. May this timeless fire guide your every step and illuminate your soul with endless grace."
+      </blockquote>
+    </div>
+
+    <!-- JavaScript to create multiple falling rose petals -->
+    <script>
+      const petalCount = 20; // Adjust the number of petals as desired
+
+      for (let i = 0; i < petalCount; i++) {
+        const petal = document.createElement("div");
+        petal.classList.add("petal");
+        // Random horizontal starting position
+        petal.style.left = Math.random() * 100 + "vw";
+        // Randomize animation duration and delay for a natural effect
+        petal.style.animationDuration = 5 + Math.random() * 5 + "s";
+        petal.style.animationDelay = Math.random() * 5 + "s";
+        document.body.appendChild(petal);
+      }
+    </script>
+  </body>
+</html>
